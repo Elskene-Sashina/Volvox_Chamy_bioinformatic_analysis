@@ -41,129 +41,31 @@
 
 ---
 
-## 📊 Выполненные предварительные Биоинформатические анализы
+## Выполненные предварительные биоинформатические анализы:
 
-### 1️⃣ Ортологи и расширенные семейства
+### 1️⃣ Ортологи / гомологи
 
 **Файл**: [`Analysis_3_Orthologs_Homologs.md`](./Analysis_3_Orthologs_Homologs.md)
 
-**Ключевые результаты**:
-- **11,332 ортогруппы** (82.9% генов в OGs)
-- **98.4% синтения** (*Volvox* vs *Chlamydomonas*)
-- **373 расширенных семейства** → **164 pure Volvox-specific**
-- **Tandem duplications**: OG0000019 (27 копий) на scaffold 1
-- **GO аннотация**: Только 2.7% генов имеют функциональную аннотацию (98.4% de novo!)
-- **Асимметричные дупликации**: 9 ортогрупп (разница ≥3 гена)
-
-**Методы**: OrthoFinder v2.5.5, DIAMOND, MSA
-
----
-
-### 2️⃣ Анализ некодирующих регионов
+### 2️⃣ Анализ некодирующих (белки) регионов
 
 **Файлы**:
-- [`Analysis_1_Noncoding_Regions.md`](./Analysis_2.1_Noncoding_Regions.md) — Основной анализ
-- [`Analysis_1_Part2_Regulatory_Elements.md`](./Analysis_2.2_Regulatory_Elements.md) — Промоторы, терминаторы, TFBS. более глубокий анализ
+- [`Analysis_1_Noncoding_Regions.md`](./Analysis_2.1_Noncoding_Regions.md) - Основной анализ
+- [`Analysis_1_Part2_Regulatory_Elements.md`](./Analysis_2.2_Regulatory_Elements.md) — Промоторы, терминаторы, TFBS
 
-**Ключевые результаты**:
-- **Genome budget**: 54.9% gene bodies, 37.6% intergenic (*Volvox*)
-- **Интроны**: 338 bp (Volvox) vs 226 bp (Chlamydomonas) → **50% длиннее**!
-- **Парадокс**: Многоклеточный *Volvox* имеет **проще** структуру генов (13% vs 46% merge efficiency)
-- **TFBS**: 805 мотивов JASPAR 2024, топ-50 для быстрого анализа
-- **Ретрогены**: 97.5% в генах *Volvox* (nested локализация)
-
-**Методы**: bedtools, MEME Suite, FIMO, Python
-
----
-
-###  3️⃣Транскриптомика SOMA/GERM
+###  3️⃣ Анализ ткане-специфичность транскриптом
 
 **Файл**: [`Analysis_2_Transcriptomics_SOMA_GERM.md`](./Analysis_2_Transcriptomics_SOMA_GERM.md)
 
-**Данные**: 
-- RNA-seq: 4 образца (2 gonidia, 2 somatic) — [PRJNA413955](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA413955)
-- Платформа: Illumina HiSeq 2500, single-end 50bp
-
-**Ключевые результаты**:
-- **12,387 генов** проанализировано
-- **3,290 (26.6%) Gonidia-specific** генов
-- **2,105 (17.0%) Somatic-specific** генов
-- **Экстремальная специализация**: log2FC до 13 (>8000-fold!)
-- **Temporal coaptation подтверждена**: 13/19 топ gonidial генов связаны с фотосинтезом
-
-**Методы**: fastp, STAR, featureCounts, DESeq2
 
 ---
 
-## 🔬 Методы и инструменты
-
-### Биоинформатические инструменты
-
-| Категория | Инструмент | Версия | Применение |
-|-----------|-----------|--------|-----------|
-| **Ортологизация** | OrthoFinder | v2.5.5 | Поиск ортогрупп, HOGs, дупликаций |
-| **Alignment** | DIAMOND | v2.0.15 | Быстрый protein-protein search |
-| **MSA** | MAFFT | v7.490 | Multiple sequence alignment |
-| **Аннотация** | InterProScan | v5.60 | Pfam, Panther, GO terms |
-| **TFBS** | MEME Suite | v5.5.5 | Поиск транскрипционных мотивов |
-| **TFBS** | FIMO | v5.5.5 | Scan sequences for motifs |
-| **Motif DB** | JASPAR | 2024 | 805 растительных TF мотивов |
-| **RNA-seq QC** | fastp | v1.0.1 | Quality control + trimming |
-| **Mapping** | STAR | v2.7.11a | RNA-seq alignment |
-| **Counting** | featureCounts | v2.0.3 | Gene-level quantification |
-| **DE analysis** | DESeq2 | v1.40 | Differential expression |
-| **Genomic ranges** | bedtools | v2.31.1 | BED file operations |
-| **BAM processing** | samtools | v1.22 | BAM indexing, filtering |
+## Arduino UNO
 
 
 ---
 
 
-### 🎯 Выводы
-
-#### 1. Минимальные изменения в кодирующей части
-
-- **98.4% синтения** между *Volvox* и *Chlamydomonas*
-- **91.9% 1:1 ортологов** — большинство генов консервативны
-- **Только 164 pure Volvox-specific** ортогруппы (1.5% генома)
-
-> 💡 **Вывод**: Многоклеточность возникла **БЕЗ** массовых дупликаций генома!
-
----
-
-#### 2. Экстремальная клеточная специализация
-
-- **43.6% генов** показывают cell-type-specific/biased экспрессию
-- **Fold changes до 13 log2FC** (>8000-fold!) — одна из самых сильных известных дифференциаций
-- **Gonidia имеют 1.65× больше** специализированных генов (5,271 vs 3,193)
-
-> 💡 **Вывод**: Радикально разные транскриптомы при минимальных геномных различиях!
-
----
-
-#### 3. Подтверждение temporal coaptation
-
-- **Somatic cells** экспрессируют "day genes": фотосинтез, подвижность (флагеллы)
-- **Gonidia** экспрессируют "night genes": деление клеток, репродукция
-- **13/19 топ gonidial генов** связаны с хлоропластами и фотосинтезом
-
-> 💡 **Вывод**: Временные программы *Chlamydomonas* стали пространственными у *Volvox*!
-
----
-
-#### 4. Regulatory evolution > coding evolution
-
-- **50% длиннее интроны** у *Volvox* (338 vs 226 bp) → больше места для регуляторных элементов
-- **97.5% ретрогенов** в генах *Volvox* (nested) → новые regulatory layers
-- **Tandem duplications** — основной механизм (OG0000019: 27 копий)
-
-> 💡 **Вывод**: Эволюция многоклеточности через **регуляторные изменения**, а не новые гены!
-
----
-
-## 🚀 Будущие направления
-
-- Дополнение данных mi\lncRNAs 
 
 -  Single-nucleus RNA-seq
 
