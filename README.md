@@ -14,6 +14,13 @@
 
 ---
 
+### План пилотного проекта
+
+<img width="839" height="719" alt="image" src="https://github.com/user-attachments/assets/31a74ed7-362d-49f8-9650-ed65477d9adf" />
+
+
+---
+
 ##  Почему это интересно?
 
 - **Простая модельная система**: *Volvox* и *Chlamydomonas* - одни из самых простых организмов для изучения эволюции многоклеточности
@@ -30,9 +37,16 @@
 ### ПОДГОТОВИТЕЛЬНЫЕ ЭТАПЫ проекта:
 
 1) разработать системы культивирования с фиксированием изменяемых переменных культуры (температура / ph / уровень CO2 / свет - с помощью Arduino UNO)
+<img width="1035" height="736" alt="image" src="https://github.com/user-attachments/assets/c24c7004-e311-490e-b21a-f8e86f4e1059" />
+
 2) написать код на C для связи сенсоров (CO2, температуры, ph, освящения) через Arduino UNO и вывод показателей через WiFi для постоянного контроля условий
+
 3) выделение 2ух ферментов Вольвокса разрушающих ECM - главная преграда для выделения ядер
+<img width="1042" height="733" alt="image" src="https://github.com/user-attachments/assets/bd23ae5e-2805-4061-8bad-9393b8f3aead" />
+
 4) перенос и адаптация протокола выделения интактных ядер с Хламидомонады на Вольвокс для последующего single nucleus RNA seq
+ <img width="1038" height="736" alt="image" src="https://github.com/user-attachments/assets/79e75afd-57e1-4670-bea1-9f9470e1a7a8" />
+
 
 ---
 
