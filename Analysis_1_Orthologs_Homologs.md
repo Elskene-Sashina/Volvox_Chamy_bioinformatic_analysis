@@ -814,25 +814,6 @@ Duplicated:     ──●──●──●──●──
 | 9 | `volvox_pure_specific_annotated.tsv` | 629 генов с аннотацией |
 | 10 | `orthogroups_with_clamy_hit.txt` | 209 OG с хитами Chlamy |
 
----
-
-## 🚀 Следующие шаги
-
-### Готово к:
-
-1. ✅ **Phylogenetic analysis**: Построение деревьев для расширенных семейств
-2. ✅ **Selection analysis**: dN/dS для определения positive/purifying selection
-3. ✅ **Synteny analysis**: Микросинтения вокруг tandem clusters
-4. ✅ **Expression profiling**: Экспрессия Volvox-specific генов в SOMA/GERM
-5. ✅ **Functional validation**: Экспериментальная проверка топ кандидатов
-
----
-
-## 🔗 Связанные анализы
-
-- [← Анализ №1: Некодирующие регионы](./Analysis_1_Noncoding_Regions.md)
-- [→ Анализ №2: Транскриптомика SOMA/GERM](./Analysis_2_Transcriptomics.md)
-- [→ Анализ №4: TFBS и regulatory networks](./Analysis_4_TFBS.md)
 
 ---
 
@@ -845,9 +826,5 @@ Duplicated:     ──●──●──●──●──
 ---
 
 <div align="center">
-
-**Made with 🧬 for comparative genomics research**
-
-*Ortholog Analysis: Chlamydomonas vs Volvox*
 
 </div>
