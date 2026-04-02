@@ -405,4 +405,3 @@ void loop() {
 
 ---
 
-*Volvox Monitor v1.0 | Сколтех | 2026*
