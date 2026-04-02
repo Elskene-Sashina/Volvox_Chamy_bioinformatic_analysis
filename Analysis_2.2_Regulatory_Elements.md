@@ -682,18 +682,6 @@ print(f"  p-value:     {p_val:.2e}")
 | 13 | `volvox_introns.fa` | FASTA последовательности интронов |
 | 14 | `fimo_volvox_introns_top50/` | Результаты FIMO (интроны) |
 
----
-
-## 🚀 Следующие шаги
-
-### Готово к:
-
-1. ✅ Comparative genomics: сравнение TFBS паттернов между видами
-2. ✅ Network analysis: построение regulatory networks
-3. ✅ Conservation analysis: поиск консервативных некодирующих элементов (CNEs)
-4. ✅ lncRNA prediction: идентификация длинных некодирующих РНК в интронах
-5. ✅ Публикация: статистика готова для manuscript
-
 
 ---
 
